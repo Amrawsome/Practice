@@ -1,0 +1,6 @@
+{
+    "java.project.sourcePaths": ["survey"], // Or wherever your source code is located
+    "java.project.referencedLibraries": [
+        "lib/mysql-connector-j-8.0.31.jar"// Includes all JARs in the lib folder and subfolders
+    ]
+}
