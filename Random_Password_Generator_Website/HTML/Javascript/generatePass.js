@@ -29,11 +29,9 @@ function generatePass(){
          
     }
     let k=0;
-        for(k=0; k<array.length;k++){
-             console.log(array[k]);
-             
-             
-         }
+        // for(k=0; k<array.length;k++){
+        //      console.log(array[k]);
+        //  }
 
          createTable(array, arrayHead);
     
@@ -46,25 +44,27 @@ function randomNumb(max , min){
 
 function createTable(array, head){
     
-let tableHTML = '<table>';
+let tableHTML = '';
 
 if(head.length > 0){
-    tableHTML += "<thead><tr>"
+    tableHTML += '<thead><tr>'
      for(const header of head){
-        tableHTML += `<th>${header}</th>`
+        tableHTML += `<th>${header}</th>`;
      }
-     tableHTML += "</tr></thead>"
+     tableHTML += '</tr></thead>'
 }
 
-tableHTML =+'<tbody>'
+tableHTML +='<tbody>'
 for(const item of array){
     tableHTML +='<tr>';
     tableHTML += `<td>${item.ID}</td>`; 
     tableHTML += `<td>${item.Password}</td>`;
     tableHTML += '</tr>';
+    console.log(item);
 }
+
 tableHTML += '</tbody></table>';
-const container = document.getElementById('table')
+const container = document.getElementById('t1');
 if(container){
     container.innerHTML = tableHTML;
 }
