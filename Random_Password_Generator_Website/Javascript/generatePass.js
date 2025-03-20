@@ -3,7 +3,7 @@ const passNumb = document.getElementById("passNum");
 const passLeng = document.getElementById("passLen");
 const submit = document.getElementById("sub");
 //Headers for table
-const arrayHead =["ID","Pasword"]
+const arrayHead =["ID","Pasword,","Keep"]
 
 //when submit element it clicked dont reload page and run generatePass();
 submit.addEventListener('click', (e) =>{
@@ -54,6 +54,7 @@ let tableHTML = '';//concatonate strings
         tableHTML +='<tr>';//create table row
         tableHTML += `<td>${item.ID}</td>`; //add ID to table
         tableHTML += `<td>${item.Password}</td>`;//add password string to table
+        tableHTML += `<td><button type ="button">Store Password</button></td>`
         tableHTML += '</tr>';//close table row
     }
 
